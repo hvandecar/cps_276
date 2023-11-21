@@ -7,10 +7,8 @@ $arr = $fileProc->init();
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>File Display</title>
     <style>
@@ -23,12 +21,13 @@ $arr = $fileProc->init();
       <h2>Upload File</h2>
       <?php echo $arr[0]; ?>
       <form action="#" method="post" enctype="multipart/form-data">  
-        <div class="form-group">
-          <label for="name">File Name</label>
+        <div class="mb-3">
+          <label for="name" class="form-label">File Name</label>
           <input type="text" class="form-control" name="name" id="name" value="">
         </div>
         <div class="mb-3">
-          <input type="file" name="formFile">
+          <label for="formFile" class="form-label">Choose File</label>
+          <input type="file" class="form-control" name="formFile" id="formFile">
         </div>
         <input type="submit" class="btn btn-primary" name="submitButton" id="submitButton" value="Upload File"/><br><br>
         <h2>Display File List</h2>

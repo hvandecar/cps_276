@@ -1,5 +1,5 @@
 <?php
-require 'classes/Pdo_methods.php';
+require 'Pdo_methods.php';
 class FileProc{
   public function init(){
     if(count($_POST) > 0){
@@ -50,7 +50,6 @@ class FileProc{
   }
 
   public function displayList(){
-    global $displayFile;
 		$pdo = new PdoMethods();
 		$sql = "SELECT * FROM pdfs";
 		//PROCESS THE SQL AND GET THE RESULTS
